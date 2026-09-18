@@ -55,8 +55,20 @@ public class Animal {
         return habilidades;
     }
 
-    public void setHabilidades(String habilidade) {
+    public void addHabilidades(String habilidade) {
         habilidades.add(habilidade);
+    }
+
+    public String emitirSom() {
+        return "Som desconhecido";
+    }
+
+    public String realizarHabilidade(String habilidade) {
+        if (habilidades.contains(habilidade)) {
+            return nome + " consegue " + habilidade;
+        } else {
+            return nome + " nao consegue " + habilidade;
+        }
     }
 
     @Override
